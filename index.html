@@ -65,25 +65,66 @@
             <section class="covid-update">
               <div class="wrapper">
                 <div class="covid-update_header">
-                  <h2>covid 19 updates</h2>
+                  <h3>covid 19 updates</h3>
                 </div>
                 <div class="covid-update_selection">
-                  <form action="/action_page.php">
+                  <form method="">
                     <ul class="form-divider">
                       <li>
-                        <label for="cars">Choose a car:</label>
-                        <select id="cars" name="cars">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="fiat">Fiat</option>
-                          <option value="audi">Audi</option>
+                        <select id="city" name="city">
+                          <option value="usa" selected>usa</option>
                         </select>
                         <input type="submit" />
                       </li>
-                      <li></li>
+                      <li>
+                        <select id="state" name="state">
+                          <option value="northern mariana island" selected>
+                            Northern mariana island
+                          </option>
+                        </select>
+                        <input type="submit" />
+                      </li>
                     </ul>
                   </form>
                 </div>
+                <ul class="information-card">
+                  <li>
+                    <figure class="information-card_image">
+                      <img
+                        src="assets/images/group-3.png"
+                        alt="total cases images"
+                      />
+                    </figure>
+                    <div class="information-card_title">
+                      <p>total cases</p>
+                      <h3>456,567</h3>
+                    </div>
+                  </li>
+                  <li>
+                    <figure class="information-card_image">
+                      <img
+                        src="assets/images/group-3_2.png"
+                        alt="recovered cases images"
+                      />
+                    </figure>
+                    <div class="information-card_title">
+                      <p>recovered cases</p>
+                      <h3>25,667</h3>
+                    </div>
+                  </li>
+                  <li>
+                    <figure class="information-card_image">
+                      <img
+                        src="assets/images/group-3.png"
+                        alt="death cases images"
+                      />
+                    </figure>
+                    <div class="information-card_title">
+                      <p>deaths</p>
+                      <h3>3,247</h3>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </section>
           </div>
