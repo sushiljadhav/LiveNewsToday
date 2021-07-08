@@ -59,78 +59,349 @@
       <!--header section end-->
       <!--main section start-->
       <main>
-        <div class="body-divider">
-          <!--Left body-->
-          <div class="left-body_divider">
-            <section class="covid-update">
-              <div class="wrapper">
-                <div class="covid-update_header">
-                  <h3>covid 19 updates</h3>
+        <section class="body-divider">
+          <div class="wrapper">
+            <!--Left body-->
+            <div class="left-body_divider">
+              <!--Covid update section start here-->
+              <section class="covid-update">
+                <div class="wrapper">
+                  <div class="covid-update_header">
+                    <h3>covid 19 updates</h3>
+                  </div>
+                  <div class="covid-update_selection">
+                    <form method="">
+                      <ul class="form-divider">
+                        <li>
+                          <select id="city" name="city">
+                            <option value="usa" selected>usa</option>
+                          </select>
+                        </li>
+                        <li>
+                          <select id="state" name="state">
+                            <option value="northern mariana island" selected>
+                              Northern mariana island
+                            </option>
+                          </select>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+                  <ul class="information-card">
+                    <li>
+                      <figure class="information-card_image">
+                        <img
+                          src="assets/images/group-3.png"
+                          alt="total cases images"
+                        />
+                      </figure>
+                      <div class="information-card_title">
+                        <p>total cases</p>
+                        <h3>456,567</h3>
+                      </div>
+                    </li>
+                    <li>
+                      <figure class="information-card_image">
+                        <img
+                          src="assets/images/group-3_2.png"
+                          alt="recovered cases images"
+                        />
+                      </figure>
+                      <div class="information-card_title">
+                        <p>recovered cases</p>
+                        <h3>25,667</h3>
+                      </div>
+                    </li>
+                    <li>
+                      <figure class="information-card_image">
+                        <img
+                          src="assets/images/group-3.png"
+                          alt="death cases images"
+                        />
+                      </figure>
+                      <div class="information-card_title">
+                        <p>deaths</p>
+                        <h3>3,247</h3>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <div class="covid-update_selection">
-                  <form method="">
-                    <ul class="form-divider">
+              </section>
+              <!--Top News Section Start here-->
+              <section class="top-news">
+                <div class="wrapper">
+                  <div class="top-news-header">
+                    <h3>Top news</h3>
+                    <ul class="arrows">
                       <li>
-                        <select id="city" name="city">
-                          <option value="usa" selected>usa</option>
-                        </select>
-                        <input type="submit" />
+                        <figure>
+                          <img
+                            src="assets/images/path-copy@2x.png"
+                            alt="left_arrow"
+                          />
+                        </figure>
                       </li>
                       <li>
-                        <select id="state" name="state">
-                          <option value="northern mariana island" selected>
-                            Northern mariana island
-                          </option>
-                        </select>
-                        <input type="submit" />
+                        <figure>
+                          <img
+                            src="assets/images/path_7@2x.png"
+                            alt="right_arrow"
+                          />
+                        </figure>
                       </li>
                     </ul>
-                  </form>
+                  </div>
+                  <div class="top-news-body">
+                    <ul class="news-body-content">
+                      <li class="news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy@3x.png"
+                            alt="flower"
+                          />
+                        </figure>
+                        <div class="news_card-badge">
+                          <span>Word</span>
+                        </div>
+                        <h5 class="news_card-header">
+                          Protestors face off with the forces of order in DC and
+                          New York, as crowds gather at City Hall in San
+                          Francisco
+                        </h5>
+                        <p class="news_card-subcontent">
+                          Hundreds of people have been arrested overnight after
+                          taking part in protests across America.
+                        </p>
+                      </li>
+                      <li class="news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy-2@3x.png"
+                            alt="rectangle-copy-2@3x"
+                          />
+                        </figure>
+                        <div class="news_card-badge">
+                          <span>us news</span>
+                        </div>
+                        <h5 class="news_card-header">
+                          Protestors face off with the forces of order in DC and
+                          New York, as crowds gather at City Hall in San
+                          Francisco
+                        </h5>
+                        <p class="news_card-subcontent">
+                          Hundreds of people have been arrested overnight after
+                          taking part in protests across America.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="sub-news">
+                    <ul class="sub-news_tabs">
+                      <li>
+                        <a
+                          href="#FIXME"
+                          title="See also"
+                          class="sub-news_active"
+                          data-attribute="see-also"
+                        >
+                          see also
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#FIXME"
+                          title="Recommended"
+                          data-attribute="recommended"
+                          >recommended</a
+                        >
+                      </li>
+                    </ul>
+                    <div class="tab_content" data-attribute="see-also">
+                      <ul class="tab_content_news-body">
+                        <li class="sub_news-card">
+                          <figure>
+                            <img
+                              src="assets/images/rectangle-copy_6@3x.png"
+                              alt="flower"
+                            />
+                          </figure>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">01.</h5>
+                            <h5 class="news_card-header">
+                              Lorem ipsum, dolor sit amet
+                            </h5>
+                            <figure>
+                              <img
+                                src="assets/images/path_7@2x.png"
+                                alt="right_arrow"
+                              />
+                            </figure>
+                          </div>
+                        </li>
+                        <li class="sub_news-card">
+                          <figure>
+                            <img
+                              src="assets/images/rectangle-copy_5@3x.png"
+                              alt="flower"
+                            />
+                          </figure>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">01.</h5>
+                            <h5 class="news_card-header">
+                              Lorem ipsum, dolor sit amet
+                            </h5>
+                            <figure>
+                              <img
+                                src="assets/images/path_7@2x.png"
+                                alt="right_arrow"
+                              />
+                            </figure>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="tab_content hide_tab"
+                      data-attribute="recommended"
+                    >
+                      <ul class="tab_content_news-body">
+                        <li class="sub_news-card">
+                          <figure>
+                            <img
+                              src="assets/images/rectangle-copy_6@3x.png"
+                              alt="flower"
+                            />
+                          </figure>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">01.</h5>
+                            <h5 class="news_card-header">
+                              Lorem ipsum, dolor sit amet
+                            </h5>
+                            <figure>
+                              <img
+                                src="assets/images/path_7@2x.png"
+                                alt="right_arrow"
+                              />
+                            </figure>
+                          </div>
+                        </li>
+                        <li class="sub_news-card">
+                          <figure>
+                            <img
+                              src="assets/images/rectangle-copy_5@3x.png"
+                              alt="flower"
+                            />
+                          </figure>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">01.</h5>
+                            <h5 class="news_card-header">
+                              Lorem ipsum, dolor sit amet
+                            </h5>
+                            <figure>
+                              <img
+                                src="assets/images/path_7@2x.png"
+                                alt="right_arrow"
+                              />
+                            </figure>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#FIXME">ads</a>
+                  </div>
+                  <div class="top-news-body">
+                    <ul class="news-body-content">
+                      <li class="news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy@3x.png"
+                            alt="flower"
+                          />
+                        </figure>
+                        <div class="news_card-badge">
+                          <span>Word</span>
+                        </div>
+                        <h5 class="news_card-header">
+                          Protestors face off with the forces of order in DC and
+                          New York, as crowds gather at City Hall in San
+                          Francisco
+                        </h5>
+                        <p class="news_card-subcontent">
+                          Hundreds of people have been arrested overnight after
+                          taking part in protests across America.
+                        </p>
+                      </li>
+                      <li class="news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy-2@3x.png"
+                            alt="rectangle-copy-2@3x"
+                          />
+                        </figure>
+                        <div class="news_card-badge">
+                          <span>us news</span>
+                        </div>
+                        <h5 class="news_card-header">
+                          Protestors face off with the forces of order in DC and
+                          New York, as crowds gather at City Hall in San
+                          Francisco
+                        </h5>
+                        <p class="news_card-subcontent">
+                          Hundreds of people have been arrested overnight after
+                          taking part in protests across America.
+                        </p>
+                      </li>
+                      <li class="news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy_3@3x.png"
+                            alt="flower"
+                          />
+                        </figure>
+                        <div class="news_card-badge">
+                          <span>entertainment</span>
+                        </div>
+                        <h5 class="news_card-header">
+                          Protestors face off with the forces of order in DC and
+                          New York, as crowds gather at City Hall in San
+                          Francisco
+                        </h5>
+                        <p class="news_card-subcontent">
+                          Hundreds of people have been arrested overnight after
+                          taking part in protests across America.
+                        </p>
+                      </li>
+                      <li class="news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy-2_3@3x.png"
+                            alt="rectangle-copy-2@3x"
+                          />
+                        </figure>
+                        <div class="news_card-badge">
+                          <span>sports</span>
+                        </div>
+                        <h5 class="news_card-header">
+                          Protestors face off with the forces of order in DC and
+                          New York, as crowds gather at City Hall in San
+                          Francisco
+                        </h5>
+                        <p class="news_card-subcontent">
+                          Hundreds of people have been arrested overnight after
+                          taking part in protests across America.
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <ul class="information-card">
-                  <li>
-                    <figure class="information-card_image">
-                      <img
-                        src="assets/images/group-3.png"
-                        alt="total cases images"
-                      />
-                    </figure>
-                    <div class="information-card_title">
-                      <p>total cases</p>
-                      <h3>456,567</h3>
-                    </div>
-                  </li>
-                  <li>
-                    <figure class="information-card_image">
-                      <img
-                        src="assets/images/group-3_2.png"
-                        alt="recovered cases images"
-                      />
-                    </figure>
-                    <div class="information-card_title">
-                      <p>recovered cases</p>
-                      <h3>25,667</h3>
-                    </div>
-                  </li>
-                  <li>
-                    <figure class="information-card_image">
-                      <img
-                        src="assets/images/group-3.png"
-                        alt="death cases images"
-                      />
-                    </figure>
-                    <div class="information-card_title">
-                      <p>deaths</p>
-                      <h3>3,247</h3>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
+              </section>
+            </div>
+            <!--Right body-->
+            <div class="right-body_divider"></div>
           </div>
-          <!--Right body-->
-          <div class="right-body_divider"></div>
-        </div>
+        </section>
       </main>
       <!--main section end-->
 
