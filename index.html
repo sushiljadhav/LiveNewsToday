@@ -4,20 +4,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
     <title>Live News EveryDay</title>
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="shortcut icon" href="favicon.ico" />
-
     <!--font-awesome link for icons-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
+    <!--font-family link for fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
     <link rel="stylesheet" media="screen" href="assets/css/style.css" />
-
     <!-- html5shiv aka html5 shim. Supporting HTML5 and CSS for IE browsers less than IE9. -->
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -46,7 +47,7 @@
             </div>
             <ul class="menu">
               <li>
-                <a href="#FIXME" title="home" class="menu_active">home</a>
+                <a href="#FIXME" title="home" class="active">home</a>
               </li>
               <li>
                 <a href="#FXME" title="world">world</a>
@@ -89,446 +90,448 @@
             <section class="left-body_divider">
               <!--Covid update div start here-->
               <div class="covid-update">
-                <div class="wrapper">
-                  <h3>covid 19 updates</h3>
-                  <div class="covid-update_selection">
-                    <form id="selection-form">
-                      <ul class="form-divider">
-                        <li>
-                          <select id="city" name="city">
-                            <option value="usa" selected>usa</option>
-                          </select>
-                        </li>
-                        <li>
-                          <select id="state" name="state">
-                            <option value="northern mariana island" selected>
-                              Northern mariana island
-                            </option>
-                          </select>
-                        </li>
-                      </ul>
-                    </form>
-                  </div>
-                  <ul class="information-card">
-                    <li>
-                      <figure class="information-card_image">
-                        <img
-                          src="assets/images/group-3.png"
-                          alt="total cases images"
-                        />
-                      </figure>
-                      <div class="information-card_title">
-                        <p>total cases</p>
-                        <h3>456,567</h3>
-                      </div>
-                    </li>
-                    <li>
-                      <figure class="information-card_image">
-                        <img
-                          src="assets/images/group-3_2.png"
-                          alt="recovered cases images"
-                        />
-                      </figure>
-                      <div class="information-card_title">
-                        <p>recovered cases</p>
-                        <h3>25,667</h3>
-                      </div>
-                    </li>
-                    <li>
-                      <figure class="information-card_image">
-                        <img
-                          src="assets/images/group-3.png"
-                          alt="death cases images"
-                        />
-                      </figure>
-                      <div class="information-card_title">
-                        <p>deaths</p>
-                        <h3>3,247</h3>
-                      </div>
-                    </li>
-                  </ul>
+                <h3 class="covid-update_header">covid 19 updates</h3>
+                <div class="covid-update_selection">
+                  <form id="selection-form">
+                    <ul class="form-divider">
+                      <li>
+                        <select id="city" name="city">
+                          <option value="usa" selected>usa</option>
+                        </select>
+                      </li>
+                      <li>
+                        <select id="state" name="state">
+                          <option value="northern mariana island">
+                            Northern mariana island
+                          </option>
+                        </select>
+                      </li>
+                    </ul>
+                  </form>
                 </div>
+                <ul class="information-card">
+                  <li>
+                    <figure class="information-card_image">
+                      <img
+                        src="assets/images/group-3.png"
+                        alt="total cases images"
+                      />
+                    </figure>
+                    <div class="information-card_title">
+                      <p>total cases</p>
+                      <h3>456,567</h3>
+                    </div>
+                  </li>
+                  <li>
+                    <figure class="information-card_image">
+                      <img
+                        src="assets/images/group-3_2.png"
+                        alt="recovered cases images"
+                      />
+                    </figure>
+                    <div class="information-card_title">
+                      <p>recovered cases</p>
+                      <h3>25,667</h3>
+                    </div>
+                  </li>
+                  <li>
+                    <figure class="information-card_image">
+                      <img
+                        src="assets/images/group-3.png"
+                        alt="death cases images"
+                      />
+                    </figure>
+                    <div class="information-card_title">
+                      <p>deaths</p>
+                      <h3>3,247</h3>
+                    </div>
+                  </li>
+                </ul>
               </div>
               <!--Top News Section Start here-->
               <section class="top-news">
-                <div class="wrapper">
-                  <div class="top-news-header">
-                    <h3>Top news</h3>
-                    <ul class="arrows">
-                      <li>
+                <div class="top-news-header">
+                  <h3>Top news</h3>
+                  <ul class="arrows">
+                    <li>
+                      <a href="#FIXME" title="previous">
                         <figure>
                           <img
-                            src="assets/images/path-copy@2x.png"
+                            src="assets/images/path-copy.png"
                             alt="left_arrow"
                           />
                         </figure>
-                      </li>
-                      <li>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#FIXME" title="next">
                         <figure>
                           <img
-                            src="assets/images/path_7@2x.png"
+                            src="assets/images/path_4.png"
                             alt="right_arrow"
                           />
                         </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="top-news-body">
+                  <ul class="news-body-content">
+                    <li class="news-card">
+                      <figure>
+                        <img
+                          src="assets/images/rectangle-copy@3x.png"
+                          alt="flower"
+                        />
+                      </figure>
+                      <div class="news_card-badge">
+                        <span>world</span>
+                      </div>
+                      <h5 class="news_card-header">
+                        Protestors face off with the forces of order in DC and
+                        New York, as crowds gather at City Hall in San Francisco
+                      </h5>
+                      <p class="news_card-subcontent">
+                        Hundreds of people have been arrested overnight after
+                        taking part in protests across America.
+                      </p>
+                    </li>
+                    <li class="news-card">
+                      <figure>
+                        <img
+                          src="assets/images/rectangle-copy-2@3x.png"
+                          alt="rectangle-copy-2@3x"
+                        />
+                      </figure>
+                      <div class="news_card-badge">
+                        <span>us news</span>
+                      </div>
+                      <h5 class="news_card-header">
+                        Protestors face off with the forces of order in DC and
+                        New York, as crowds gather at City Hall in San Francisco
+                      </h5>
+                      <p class="news_card-subcontent">
+                        Hundreds of people have been arrested overnight after
+                        taking part in protests across America.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sub-news">
+                  <ul class="sub-news_tabs">
+                    <li>
+                      <a
+                        href="#FIXME"
+                        title="See also"
+                        class="active"
+                        data-attribute="see-also"
+                      >
+                        see also
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#FIXME"
+                        title="Recommended"
+                        data-attribute="recommended"
+                        >recommended</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="tab_content" data-attribute="see-also">
+                    <ul class="tab_content_news-body">
+                      <li class="sub_news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy_6@3x.png"
+                            alt="rectangle-copy_6@3x"
+                          />
+                        </figure>
+                        <div class="news-card-content">
+                          <h5 class="news_card-header">
+                            01.Lorem ipsum, dolor sit amet
+                          </h5>
+                          <a href="#FIXME" title="next">
+                            <figure>
+                              <img
+                                src="assets/images/path_4.png"
+                                alt="right_arrow"
+                              />
+                            </figure>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="sub_news-card active">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy_5@3x.png"
+                            alt="rectangle-copy_5@3x"
+                          />
+                        </figure>
+                        <div class="news-card-content">
+                          <h5 class="news_card-header">
+                            01.Lorem ipsum, dolor sit amet
+                          </h5>
+                          <a href="#FIXME" title="next">
+                            <figure>
+                              <img
+                                src="assets/images/path_4.png"
+                                alt="right_arrow"
+                              />
+                            </figure>
+                          </a>
+                        </div>
                       </li>
                     </ul>
                   </div>
-                  <div class="top-news-body">
-                    <ul class="news-body-content">
-                      <li class="news-card">
+                  <div
+                    class="tab_content hide_tab"
+                    data-attribute="recommended"
+                  >
+                    <ul class="tab_content_news-body">
+                      <li class="sub_news-card">
                         <figure>
                           <img
-                            src="assets/images/rectangle-copy@3x.png"
-                            alt="flower"
+                            src="assets/images/rectangle-copy_6@3x.png"
+                            alt="rectangle-copy_6@3x"
                           />
                         </figure>
-                        <div class="news_card-badge">
-                          <span>world</span>
+                        <div class="news-card-content">
+                          <h5 class="news_card-header">
+                            01.Lorem ipsum, dolor sit amet
+                          </h5>
+                          <figure>
+                            <img
+                              src="assets/images/path_7@2x.png"
+                              alt="right_arrow"
+                            />
+                          </figure>
                         </div>
-                        <h5 class="news_card-header">
-                          Protestors face off with the forces of order in DC and
-                          New York, as crowds gather at City Hall in San
-                          Francisco
-                        </h5>
-                        <p class="news_card-subcontent">
-                          Hundreds of people have been arrested overnight after
-                          taking part in protests across America.
-                        </p>
                       </li>
-                      <li class="news-card">
+                      <li class="sub_news-card">
                         <figure>
                           <img
-                            src="assets/images/rectangle-copy-2@3x.png"
-                            alt="rectangle-copy-2@3x"
+                            src="assets/images/rectangle-copy_5@3x.png"
+                            alt="rectangle-copy_5@3x"
                           />
                         </figure>
-                        <div class="news_card-badge">
-                          <span>us news</span>
+                        <div class="news-card-content">
+                          <h5 class="news_card-header">
+                            02.Lorem ipsum, dolor sit amet
+                          </h5>
+                          <figure>
+                            <img
+                              src="assets/images/path_7@2x.png"
+                              alt="right_arrow"
+                            />
+                          </figure>
                         </div>
-                        <h5 class="news_card-header">
-                          Protestors face off with the forces of order in DC and
-                          New York, as crowds gather at City Hall in San
-                          Francisco
-                        </h5>
-                        <p class="news_card-subcontent">
-                          Hundreds of people have been arrested overnight after
-                          taking part in protests across America.
-                        </p>
                       </li>
                     </ul>
                   </div>
-                  <div class="sub-news">
-                    <ul class="sub-news_tabs">
-                      <li>
-                        <a
-                          href="#FIXME"
-                          title="See also"
-                          class="sub-news_active"
-                          data-attribute="see-also"
-                        >
-                          see also
-                        </a>
+                </div>
+                <div class="ads">
+                  <a href="#FIXME" title="advertisement">ads</a>
+                </div>
+                <div class="top-news-body">
+                  <ul class="news-body-content">
+                    <li class="news-card">
+                      <figure>
+                        <img
+                          src="assets/images/rectangle-copy@3x.png"
+                          alt="rectangle-copy@3x"
+                        />
+                      </figure>
+                      <div class="news_card-badge">
+                        <span>business</span>
+                      </div>
+                      <h5 class="news_card-header">
+                        Protestors face off with the forces of order in DC and
+                        New York, as crowds gather at City Hall in San Francisco
+                      </h5>
+                      <p class="news_card-subcontent">
+                        Hundreds of people have been arrested overnight after
+                        taking part in protests across America.
+                      </p>
+                    </li>
+                    <li class="news-card">
+                      <figure>
+                        <img
+                          src="assets/images/rectangle-copy-2@3x.png"
+                          alt="rectangle-copy-2@3x"
+                        />
+                      </figure>
+                      <div class="news_card-badge">
+                        <span>health</span>
+                      </div>
+                      <h5 class="news_card-header">
+                        Protestors face off with the forces of order in DC and
+                        New York, as crowds gather at City Hall in San Francisco
+                      </h5>
+                      <p class="news_card-subcontent">
+                        Hundreds of people have been arrested overnight after
+                        taking part in protests across America.
+                      </p>
+                    </li>
+                    <li class="news-card">
+                      <figure>
+                        <img
+                          src="assets/images/rectangle-copy_3@3x.png"
+                          alt="rectangle-copy_3@3x"
+                        />
+                      </figure>
+                      <div class="news_card-badge">
+                        <span>entertainment</span>
+                      </div>
+                      <h5 class="news_card-header">
+                        Protestors face off with the forces of order in DC and
+                        New York, as crowds gather at City Hall in San Francisco
+                      </h5>
+                      <p class="news_card-subcontent">
+                        Hundreds of people have been arrested overnight after
+                        taking part in protests across America.
+                      </p>
+                    </li>
+                    <li class="news-card">
+                      <figure>
+                        <img
+                          src="assets/images/rectangle-copy-2_3@3x.png"
+                          alt="rectangle-copy-2@3x"
+                        />
+                      </figure>
+                      <div class="news_card-badge">
+                        <span>sports</span>
+                      </div>
+                      <h5 class="news_card-header">
+                        Protestors face off with the forces of order in DC and
+                        New York, as crowds gather at City Hall in San Francisco
+                      </h5>
+                      <p class="news_card-subcontent">
+                        Hundreds of people have been arrested overnight after
+                        taking part in protests across America.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sub-news-content">
+                  <ul class="sub-news_tabs">
+                    <li>
+                      <a
+                        href="#FIXME"
+                        title="See also"
+                        class="active"
+                        data-attribute="see-also"
+                      >
+                        see also
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tab_content" data-attribute="see-also">
+                    <ul class="tab_content_news-body">
+                      <li class="sub_news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy_6@3x.png"
+                            alt="rectangle-copy_6@3x"
+                          />
+                        </figure>
+                        <div class="news-card-content">
+                          <h5 class="news_card-header">
+                            01.Lorem ipsum, dolor sit amet
+                          </h5>
+                          <a href="#FIXME" title="right arrow">
+                            <figure>
+                              <img src="assets/images/path_4.png" alt="next" />
+                            </figure>
+                          </a>
+                        </div>
                       </li>
-                      <li>
-                        <a
-                          href="#FIXME"
-                          title="Recommended"
-                          data-attribute="recommended"
-                          >recommended</a
-                        >
+                      <li class="sub_news-card">
+                        <figure>
+                          <img
+                            src="assets/images/rectangle-copy_5@3x.png"
+                            alt="rectangle-copy_5@3x"
+                          />
+                        </figure>
+                        <div class="news-card-content">
+                          <h5 class="news_card-header">
+                            01.Lorem ipsum, dolor sit amet
+                          </h5>
+                          <a href="#FIXME" title="next">
+                            <figure>
+                              <img
+                                src="assets/images/path_4.png"
+                                alt="right_arrow"
+                              />
+                            </figure>
+                          </a>
+                        </div>
                       </li>
                     </ul>
-                    <div class="tab_content" data-attribute="see-also">
-                      <ul class="tab_content_news-body">
-                        <li class="sub_news-card">
-                          <figure>
-                            <img
-                              src="assets/images/rectangle-copy_6@3x.png"
-                              alt="rectangle-copy_6@3x"
-                            />
-                          </figure>
-                          <div class="news-card-content">
-                            <h5 class="news_card-header">
-                              01.Lorem ipsum, dolor sit amet
-                            </h5>
-                            <figure>
-                              <img
-                                src="assets/images/path_7@2x.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </div>
-                        </li>
-                        <li class="sub_news-card">
-                          <figure>
-                            <img
-                              src="assets/images/rectangle-copy_5@3x.png"
-                              alt="rectangle-copy_5@3x"
-                            />
-                          </figure>
-                          <div class="news-card-content">
-                            <h5 class="news_card-header">
-                              01.Lorem ipsum, dolor sit amet
-                            </h5>
-                            <figure>
-                              <img
-                                src="assets/images/path_7@2x.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div
-                      class="tab_content hide_tab"
-                      data-attribute="recommended"
-                    >
-                      <ul class="tab_content_news-body">
-                        <li class="sub_news-card">
-                          <figure>
-                            <img
-                              src="assets/images/rectangle-copy_6@3x.png"
-                              alt="rectangle-copy_6@3x"
-                            />
-                          </figure>
-                          <div class="news-card-content">
-                            <h5 class="news_card-header">
-                              01.Lorem ipsum, dolor sit amet
-                            </h5>
-                            <figure>
-                              <img
-                                src="assets/images/path_7@2x.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </div>
-                        </li>
-                        <li class="sub_news-card">
-                          <figure>
-                            <img
-                              src="assets/images/rectangle-copy_5@3x.png"
-                              alt="rectangle-copy_5@3x"
-                            />
-                          </figure>
-                          <div class="news-card-content">
-                            <h5 class="news_card-header">
-                              02.Lorem ipsum, dolor sit amet
-                            </h5>
-                            <figure>
-                              <img
-                                src="assets/images/path_7@2x.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="ads">
-                    <a href="#FIXME" title="advertisement">ads</a>
-                  </div>
-                  <div class="top-news-body">
-                    <ul class="news-body-content">
-                      <li class="news-card">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy@3x.png"
-                            alt="rectangle-copy@3x"
-                          />
-                        </figure>
-                        <div class="news_card-badge">
-                          <span>business</span>
-                        </div>
-                        <h5 class="news_card-header">
-                          Protestors face off with the forces of order in DC and
-                          New York, as crowds gather at City Hall in San
-                          Francisco
-                        </h5>
-                        <p class="news_card-subcontent">
-                          Hundreds of people have been arrested overnight after
-                          taking part in protests across America.
-                        </p>
-                      </li>
-                      <li class="news-card">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy-2@3x.png"
-                            alt="rectangle-copy-2@3x"
-                          />
-                        </figure>
-                        <div class="news_card-badge">
-                          <span>health</span>
-                        </div>
-                        <h5 class="news_card-header">
-                          Protestors face off with the forces of order in DC and
-                          New York, as crowds gather at City Hall in San
-                          Francisco
-                        </h5>
-                        <p class="news_card-subcontent">
-                          Hundreds of people have been arrested overnight after
-                          taking part in protests across America.
-                        </p>
-                      </li>
-                      <li class="news-card">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy_3@3x.png"
-                            alt="rectangle-copy_3@3x"
-                          />
-                        </figure>
-                        <div class="news_card-badge">
-                          <span>entertainment</span>
-                        </div>
-                        <h5 class="news_card-header">
-                          Protestors face off with the forces of order in DC and
-                          New York, as crowds gather at City Hall in San
-                          Francisco
-                        </h5>
-                        <p class="news_card-subcontent">
-                          Hundreds of people have been arrested overnight after
-                          taking part in protests across America.
-                        </p>
-                      </li>
-                      <li class="news-card">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy-2_3@3x.png"
-                            alt="rectangle-copy-2@3x"
-                          />
-                        </figure>
-                        <div class="news_card-badge">
-                          <span>sports</span>
-                        </div>
-                        <h5 class="news_card-header">
-                          Protestors face off with the forces of order in DC and
-                          New York, as crowds gather at City Hall in San
-                          Francisco
-                        </h5>
-                        <p class="news_card-subcontent">
-                          Hundreds of people have been arrested overnight after
-                          taking part in protests across America.
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="sub-news-content">
-                    <ul class="sub-news_tabs">
-                      <li>
-                        <a
-                          href="#FIXME"
-                          title="See also"
-                          class="sub-news_active"
-                          data-attribute="see-also"
-                        >
-                          see also
-                        </a>
-                      </li>
-                    </ul>
-                    <div class="tab_content" data-attribute="see-also">
-                      <ul class="tab_content_news-body">
-                        <li class="sub_news-card">
-                          <figure>
-                            <img
-                              src="assets/images/rectangle-copy_6@3x.png"
-                              alt="rectangle-copy_6@3x"
-                            />
-                          </figure>
-                          <div class="news-card-content">
-                            <h5 class="news_card-header">
-                              01.Lorem ipsum, dolor sit amet
-                            </h5>
-                            <figure>
-                              <img
-                                src="assets/images/path_7@2x.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </div>
-                        </li>
-                        <li class="sub_news-card">
-                          <figure>
-                            <img
-                              src="assets/images/rectangle-copy_5@3x.png"
-                              alt="rectangle-copy_5@3x"
-                            />
-                          </figure>
-                          <div class="news-card-content">
-                            <h5 class="news_card-header">
-                              01.Lorem ipsum, dolor sit amet
-                            </h5>
-                            <figure>
-                              <img
-                                src="assets/images/path_7@2x.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </section>
               <!--Live News Section Start Here-->
               <section class="livenews">
-                <div class="wrapper">
-                  <div class="live-news-header">
-                    <div class="dot"></div>
-                    <h3>live news</h3>
-                    <a href="#FIXME" title="see more">see more</a>
+                <div class="live-news-header">
+                  <div class="live-news-header_circle">
+                    <span class="dot"></span>
                   </div>
-                  <ul class="live-news_content">
-                    <li>
-                      <figure>
-                        <img
-                          src="assets/images/rectangle-copy_8.png"
-                          alt="rectangle-copy-2_4@3x"
-                        />
-                      </figure>
-                      <div class="overlay"></div>
-                      <figure class="play-button">
-                        <img
-                          src="assets/images/play-button-1_2.png"
-                          alt="Play Button"
-                        />
-                      </figure>
-                      <h5 class="news_card-header">
-                        Protestors face off with the forces of order in DC and
-                        New York, as crowds gather at City Hall in San Francisco
-                      </h5>
-                    </li>
-                    <li>
-                      <figure>
-                        <img
-                          src="assets/images/rectangle-copy-2_4.png"
-                          alt="rectangle-copy-2_4"
-                        />
-                      </figure>
-                      <div class="overlay"></div>
-                      <figure class="play-button">
-                        <img
-                          src="assets/images/play-button-1_2.png"
-                          alt="Play Button"
-                        />
-                      </figure>
-                      <h5 class="news_card-header">
-                        Protestors face off with the forces of order in DC and
-                        New York, as crowds gather at City Hall in San Francisco
-                      </h5>
-                    </li>
-                  </ul>
+                  <h3>live news</h3>
+                  <a href="#FIXME" title="see more"> see more </a>
+                  <figure>
+                    <img src="assets/images/path.png" alt="right_arrow" />
+                  </figure>
                 </div>
+                <ul class="live-news_content">
+                  <li>
+                    <figure class="video_image">
+                      <img
+                        src="assets/images/rectangle-copy_8.png"
+                        alt="rectangle-copy-2_4@3x"
+                      />
+                    </figure>
+                    <div class="overlay"></div>
+                    <figure class="play-button">
+                      <img
+                        src="assets/images/play-button-1.png"
+                        alt="Play Button"
+                      />
+                    </figure>
+                    <h5 class="news_card-header">
+                      Protestors face off with the forces of order in DC and New
+                      York, as crowds gather at City Hall in San Francisco
+                    </h5>
+                  </li>
+                  <li>
+                    <figure class="video_image">
+                      <img
+                        src="assets/images/rectangle-copy-2_4.png"
+                        alt="rectangle-copy-2_4"
+                      />
+                    </figure>
+                    <div class="overlay"></div>
+                    <figure class="play-button">
+                      <img
+                        src="assets/images/play-button-1_2.png"
+                        alt="Play Button"
+                      />
+                    </figure>
+                    <h5 class="news_card-header">
+                      Protestors face off with the forces of order in DC and New
+                      York, as crowds gather at City Hall in San Francisco
+                    </h5>
+                  </li>
+                </ul>
               </section>
             </section>
             <!--Right body-->
             <aside class="right-body_divider">
-              <div class="wrapper">
-                <h4>don't miss</h4>
-                <div class="line"></div>
-                <ul class="news_list">
-                  <li>
+              <h4>don't miss</h4>
+              <div class="line"></div>
+              <ul class="news_list">
+                <li>
+                  <a href="#FIXME" title="lorem news">
                     <figure>
                       <img
                         src="https://via.placeholder.com/100X50"
@@ -538,8 +541,10 @@
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
-                  </li>
-                  <li>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem news">
                     <figure>
                       <img
                         src="https://via.placeholder.com/100X50"
@@ -549,8 +554,10 @@
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit
                     </p>
-                  </li>
-                  <li>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem news" class="active">
                     <figure>
                       <img
                         src="https://via.placeholder.com/100X50"
@@ -560,8 +567,10 @@
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit
                     </p>
-                  </li>
-                  <li>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem news">
                     <figure>
                       <img
                         src="https://via.placeholder.com/100X50"
@@ -571,8 +580,10 @@
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit
                     </p>
-                  </li>
-                  <li>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem news">
                     <figure>
                       <img
                         src="https://via.placeholder.com/100X50"
@@ -582,82 +593,73 @@
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit
                     </p>
-                  </li>
-                </ul>
-                <div class="ads">
-                  <a href="#FIXME" title="advertisement">ads</a>
-                </div>
-                <div class="aside_image">
-                  <figure>
-                    <img
-                      src="https://via.placeholder.com/300X250"
-                      alt="Advertisement Image"
-                    />
-                  </figure>
-                </div>
-                <div class="see-also_title">
-                  <a href="#FIXME" title="see also"></a>
-                </div>
-                <ol class="see-also_list">
-                  <li>
-                    <a href="#FIXME" title="lorem">
-                      lorem
-                      <figure>
-                        <img
-                          src="assets/images/path_8.png"
-                          alt="arrow forward"
-                        />
-                      </figure>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#FIXME" title="lorem">
-                      lorem
-                      <figure>
-                        <img
-                          src="assets/images/path_8.png"
-                          alt="arrow forward"
-                        />
-                      </figure>
-                    </a>
-                  </li>
-                  <li class="active_list_content">
-                    <a href="#FIXME" title="lorem">
-                      lorem
-                      <figure>
-                        <img
-                          src="assets/images/path_8.png"
-                          alt="arrow forward"
-                        />
-                      </figure>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#FIXME" title="lorem">
-                      lorem
-                      <figure>
-                        <img
-                          src="assets/images/path_8.png"
-                          alt="arrow forward"
-                        />
-                      </figure>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#FIXME" title="lorem">
-                      lorem
-                      <figure>
-                        <img
-                          src="assets/images/path_8.png"
-                          alt="arrow forward"
-                        />
-                      </figure>
-                    </a>
-                  </li>
-                </ol>
-                <div class="ads">
-                  <a href="#FIXME" title="advertisement">ads</a>
-                </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="ads">
+                <a href="#FIXME" title="advertisement">ads</a>
+              </div>
+              <div class="aside_image">
+                <figure>
+                  <img
+                    src="https://via.placeholder.com/300X250"
+                    alt="Advertisement Image"
+                  />
+                </figure>
+              </div>
+              <div class="see-also_title">
+                <h4>see also</h4>
+                <div class="line"></div>
+              </div>
+              <ol class="see-also_list" type="1">
+                <li>
+                  <a href="#FIXME" title="lorem">
+                    <span>1.</span>
+                    Lorem, ipsum dolor sit amet
+                    <figure>
+                      <img src="assets/images/path_8.png" alt="arrow forward" />
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem">
+                    <span>2.</span>
+                    Lorem, ipsum dolor sit amet
+                    <figure>
+                      <img src="assets/images/path_8.png" alt="arrow forward" />
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem" class="active">
+                    <span>3.</span>
+                    Lorem, ipsum dolor sit amet
+                    <figure>
+                      <img src="assets/images/path_8.png" alt="arrow forward" />
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem">
+                    <span>4.</span>
+                    Lorem, ipsum dolor sit amet
+                    <figure>
+                      <img src="assets/images/path_8.png" alt="arrow forward" />
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FIXME" title="lorem">
+                    <span>5.</span>
+                    Lorem, ipsum dolor sit amet
+                    <figure>
+                      <img src="assets/images/path_8.png" alt="arrow forward" />
+                    </figure>
+                  </a>
+                </li>
+              </ol>
+              <div class="ads">
+                <a href="#FIXME" title="advertisement">ads</a>
               </div>
             </aside>
           </div>
@@ -695,7 +697,7 @@
                 <a href="#FIXME" title="Terms of service">Terms of service</a>
               </li>
               <li>
-                <a href="#FIXME" title="Contact us" class="footer-list_active"
+                <a href="#FIXME" title="Contact us" class="active"
                   >contact us</a
                 >
               </li>
