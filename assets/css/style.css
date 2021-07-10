@@ -324,6 +324,7 @@ nav li a:hover {
 
 .body-divider .wrapper {
   width: 84%;
+  margin-bottom: 72px;
   display: flex;    
   flex-wrap: wrap;
   
@@ -527,7 +528,7 @@ nav li a:hover {
 }
 
 .sub-news-content {
-  margin-bottom: 58px;
+  margin-bottom: 10px;
 }
 
 .sub-news_tabs {
@@ -606,18 +607,22 @@ nav li a:hover {
   display: none;
 }
 
-.top-news .ads {
+.top-news .ads,.ads {
   margin-bottom: 12px;
   text-align: right;
 }
 
-.top-news .ads a {
+
+.top-news .ads a,.ads a {
   color: #777;
   font-family: 'Heebo';
   font-size: 12px;
   letter-spacing: 0.15px;
 }
 
+.ads {
+  margin-bottom: 24px;
+}
 /* live news styling start here */
 
 .live-news-header {  
@@ -634,6 +639,18 @@ nav li a:hover {
   margin-right: 6px;
 }
 
+.live-news-header_circle .dot{
+  opacity: 5%;
+}
+
+.live-news-header h3::before {
+  opacity: 20%;
+}
+
+.live-news-header h3::before,.live-news-header h3::after  {
+  left: -24%;
+}
+
 .live-news-header h3{
   padding: 0;
   margin-bottom: 0;
@@ -641,10 +658,6 @@ nav li a:hover {
   position: relative;
   background-color: transparent;
 } 
-
-.live-news-header h3::before,.live-news-header h3::after  {
-  left: -24%;
-}
 
 .live-news-header a {
   margin-left: auto;
@@ -669,6 +682,10 @@ nav li a:hover {
   position: relative;
 }
 
+.live-news_content li a.active .news_card-header {
+  text-decoration: underline;
+}
+
 .live-news_content li:not(:last-of-type) {
   margin-right: calc(4.1% - 10px);
 }
@@ -683,6 +700,9 @@ nav li a:hover {
   left: 39%;
 }
 
+.overlay {
+  display: none;
+}
 /* aside styling start here */
 
 aside.right-body_divider .wrapper {
@@ -803,6 +823,23 @@ aside.right-body_divider .wrapper {
   margin-left: auto;
 }
 
+/*Information div styling start here*/
+
+.information .wrapper {
+  width: 67%;
+  text-align: center;
+}
+
+.information .wrapper p{
+  margin-right: 10%;
+  margin-bottom: 15px;
+  color: #777;
+  font-family: 'Heebo';
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+}
+
 /*=================================
   main styling ends here
 =================================*/
@@ -811,11 +848,76 @@ aside.right-body_divider .wrapper {
   footer styling starts here
 =================================*/
 
+footer {
+  background-color:#003366;
+}
+
+.footer-content .wrapper {
+  width: 84%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+}
+
+.footer_logo {
+  width: 13%;
+}
+
+.footer-content_list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-content_list li a {
+  padding: 0px 8px;
+  color: #afbcc8;
+  font-size: 12px;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.footer-content_list li a.active {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-content_list li:not(:last-of-type) a {
+  border-right: 1px solid #afbcc8;
+}
+
+.footer-content_list li:last-of-type a {
+  padding-right: 0;
+}
 
 
+.top {
+  position: fixed;
+  bottom: 105px;
+  right: 105px;
+  background-color: #0091ff;
+  border-radius: 100%;
+  height: 63px;
+  width: 63px;
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.top figure {
+  margin-bottom: 5px;
+}
 
-
+.top span {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14.5px;
+  text-transform: uppercase;
+}
 
 /*=================================
   footer styling ends here
