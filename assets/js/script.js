@@ -175,25 +175,6 @@ hamburger.addEventListener("click",()=>{
   }
 })
 
-$(document).ready(function(){
-    
-    debugger
-    var nav = $("nav");
-    hamburger.click(function(e){
-        var b = hamburger.hasClass("active-hamburger");
-        if (b) {
-        hamburger.removeClass("active-hamburger");
-        nav.removeClass("active-nav");
-        // $("html").removeClass("no-scroll");
-        // $(".active-nav").css("overflow", "hideen");
-        } else {
-        hamburger.addClass("active-hamburger");
-        nav.addClass("active-nav");
-        // $("html").addClass("no-scroll");
-        // $(".active-nav").css("overflow-y", "auto");
-        }
-    })   
-})
 
 
 
