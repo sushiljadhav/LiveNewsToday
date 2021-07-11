@@ -7,6 +7,10 @@
     <title>Live News EveryDay</title>
     <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
     <link rel="shortcut icon" href="favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
     <!--font-awesome link for icons-->
     <link
       rel="stylesheet"
@@ -43,12 +47,12 @@
               />
             </a>
           </h1>
+          <div class="burger">
+            <span class="first"></span>
+            <span class="second"></span>
+            <span class="third"></span>
+          </div>
           <nav>
-            <div class="burger">
-              <span>line1</span>
-              <span>line2</span>
-              <span>line3</span>
-            </div>
             <ul class="menu">
               <li>
                 <a href="#FIXME" title="home" class="active">home</a>
@@ -104,11 +108,7 @@
                         </select>
                       </li>
                       <li>
-                        <select id="state" name="state">
-                          <option value="northern mariana island">
-                            Northern mariana island
-                          </option>
-                        </select>
+                        <select id="state" name="state"></select>
                       </li>
                     </ul>
                   </form>
@@ -123,7 +123,7 @@
                     </figure>
                     <div class="information-card_title">
                       <p>total cases</p>
-                      <h3>456,567</h3>
+                      <h3 class="total-cases"></h3>
                     </div>
                   </li>
                   <li>
@@ -147,7 +147,7 @@
                     </figure>
                     <div class="information-card_title">
                       <p>deaths</p>
-                      <h3>3,247</h3>
+                      <h3 class="death-cases"></h3>
                     </div>
                   </li>
                 </ul>
@@ -228,7 +228,7 @@
                   </ul>
                 </div>
                 <div class="sub-news">
-                  <ul class="sub-news_tabs">
+                  <ul class="sub-news_tabs" id="subnews-tab">
                     <li>
                       <a
                         href="#FIXME"
@@ -248,96 +248,102 @@
                       >
                     </li>
                   </ul>
-                  <div class="tab_content" data-attribute="see-also">
-                    <ul class="tab_content_news-body">
-                      <li class="sub_news-card">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy_6@3x.png"
-                            alt="rectangle-copy_6@3x"
-                          />
-                        </figure>
-                        <div class="news-card-content">
-                          <h5 class="news_card-header">
-                            01.Lorem ipsum, dolor sit amet
-                          </h5>
-                          <a href="#FIXME" title="next">
-                            <figure>
-                              <img
-                                src="assets/images/path_4.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="sub_news-card active">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy_5@3x.png"
-                            alt="rectangle-copy_5@3x"
-                          />
-                        </figure>
-                        <div class="news-card-content">
-                          <h5 class="news_card-header">
-                            01.Lorem ipsum, dolor sit amet
-                          </h5>
-                          <a href="#FIXME" title="next">
-                            <figure>
-                              <img
-                                src="assets/images/path_4.png"
-                                alt="right_arrow"
-                              />
-                            </figure>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    class="tab_content hide_tab"
-                    data-attribute="recommended"
-                  >
-                    <ul class="tab_content_news-body">
-                      <li class="sub_news-card">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy_6@3x.png"
-                            alt="rectangle-copy_6@3x"
-                          />
-                        </figure>
-                        <div class="news-card-content">
-                          <h5 class="news_card-header">
-                            01.Lorem ipsum, dolor sit amet
-                          </h5>
+                  <div class="tab-parent">
+                    <div
+                      class="tab_content tab_active"
+                      data-attribute="see-also"
+                    >
+                      <ul class="tab_content_news-body">
+                        <li class="sub_news-card">
                           <figure>
                             <img
-                              src="assets/images/path_7@2x.png"
-                              alt="right_arrow"
+                              src="assets/images/rectangle-copy_6@3x.png"
+                              alt="rectangle-copy_6@3x"
                             />
                           </figure>
-                        </div>
-                      </li>
-                      <li class="sub_news-card">
-                        <figure>
-                          <img
-                            src="assets/images/rectangle-copy_5@3x.png"
-                            alt="rectangle-copy_5@3x"
-                          />
-                        </figure>
-                        <div class="news-card-content">
-                          <h5 class="news_card-header">
-                            02.Lorem ipsum, dolor sit amet
-                          </h5>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">
+                              01.Lorem ipsum, dolor sit amet
+                            </h5>
+                            <a href="#FIXME" title="next">
+                              <figure>
+                                <img
+                                  src="assets/images/path_4.png"
+                                  alt="right_arrow"
+                                />
+                              </figure>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="sub_news-card active">
                           <figure>
                             <img
-                              src="assets/images/path_7@2x.png"
-                              alt="right_arrow"
+                              src="assets/images/rectangle-copy_5@3x.png"
+                              alt="rectangle-copy_5@3x"
                             />
                           </figure>
-                        </div>
-                      </li>
-                    </ul>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">
+                              01.Lorem ipsum, dolor sit amet
+                            </h5>
+                            <a href="#FIXME" title="next">
+                              <figure>
+                                <img
+                                  src="assets/images/path_4.png"
+                                  alt="right_arrow"
+                                />
+                              </figure>
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tab_content" data-attribute="recommended">
+                      <ul class="tab_content_news-body">
+                        <li class="sub_news-card">
+                          <figure>
+                            <img
+                              src="assets/images/rectangle-copy_6@3x.png"
+                              alt="rectangle-copy_6@3x"
+                            />
+                          </figure>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">
+                              01.Lorem ipsum, dolor sit amet
+                            </h5>
+                            <a href="#FIXME" title="next">
+                              <figure>
+                                <img
+                                  src="assets/images/path_4.png"
+                                  alt="right_arrow"
+                                />
+                              </figure>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="sub_news-card">
+                          <figure>
+                            <img
+                              src="assets/images/rectangle-copy_5@3x.png"
+                              alt="rectangle-copy_5@3x"
+                            />
+                          </figure>
+                          <div class="news-card-content">
+                            <h5 class="news_card-header">
+                              02.Lorem ipsum, dolor sit amet
+                            </h5>
+                            <a href="#FIXME" title="next">
+                              <figure>
+                                <img
+                                  src="assets/images/path_4.png"
+                                  alt="right_arrow"
+                                />
+                              </figure>
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div class="ads">
@@ -448,7 +454,7 @@
                       </a>
                     </li>
                   </ul>
-                  <div class="tab_content" data-attribute="see-also">
+                  <div class="tab_content tab_active" data-attribute="see-also">
                     <ul class="tab_content_news-body">
                       <li class="sub_news-card">
                         <figure>
@@ -517,17 +523,26 @@
                           alt="rectangle-copy-2_4@3x"
                         />
                       </figure>
-
-                      <div class="overlay">
-                        <video
-                          src="https://www.youtube.com/watch?v=BkDfKdNOhGg"
-                          autoplay
-                        ></video>
+                      <div class="modal" id="modal">
+                        <div class="close">
+                          <span class="close" id="close">&times;</span>
+                        </div>
+                        <div class="modal-video-container" id="mdc">
+                          <iframe
+                            class="video-popup"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                            id="modal-video"
+                          ></iframe>
+                        </div>
                       </div>
                       <figure class="play-button">
                         <img
                           src="assets/images/play-button-1.png"
                           alt="Play Button"
+                          data-attribute="https://www.youtube.com/embed/kY5G8s99Fl8?autoplay=1"
+                          data-vidup
                         />
                       </figure>
                     </a>
@@ -544,16 +559,26 @@
                           alt="rectangle-copy-2_4"
                         />
                       </figure>
-                      <div class="overlay">
-                        <video
-                          src="https://www.youtube.com/watch?v=BkDfKdNOhGg"
-                          autoplay
-                        ></video>
+                      <div class="modal" id="modal">
+                        <div class="close">
+                          <span class="close" id="close">&times;</span>
+                        </div>
+                        <div class="modal-video-container" id="mdc">
+                          <iframe
+                            class="video-popup"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                            id="modal-video"
+                          ></iframe>
+                        </div>
                       </div>
                       <figure class="play-button">
                         <img
                           src="assets/images/play-button-1_2.png"
                           alt="Play Button"
+                          data-attribute="https://www.youtube.com/embed/DX2f5wAGrkk?autoplay=1"
+                          data-vidup
                         />
                       </figure>
                     </a>
@@ -571,67 +596,67 @@
               <div class="line"></div>
               <ul class="news_list">
                 <li>
+                  <figure>
+                    <img
+                      src="https://via.placeholder.com/100X50"
+                      alt="news image"
+                    />
+                  </figure>
                   <a href="#FIXME" title="lorem news">
-                    <figure>
-                      <img
-                        src="https://via.placeholder.com/100X50"
-                        alt="news image"
-                      />
-                    </figure>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </a>
                 </li>
                 <li>
+                  <figure>
+                    <img
+                      src="https://via.placeholder.com/100X50"
+                      alt="news image"
+                    />
+                  </figure>
                   <a href="#FIXME" title="lorem news">
-                    <figure>
-                      <img
-                        src="https://via.placeholder.com/100X50"
-                        alt="news image"
-                      />
-                    </figure>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </a>
                 </li>
                 <li>
+                  <figure>
+                    <img
+                      src="https://via.placeholder.com/100X50"
+                      alt="news image"
+                    />
+                  </figure>
                   <a href="#FIXME" title="lorem news" class="active">
-                    <figure>
-                      <img
-                        src="https://via.placeholder.com/100X50"
-                        alt="news image"
-                      />
-                    </figure>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </a>
                 </li>
                 <li>
+                  <figure>
+                    <img
+                      src="https://via.placeholder.com/100X50"
+                      alt="news image"
+                    />
+                  </figure>
                   <a href="#FIXME" title="lorem news">
-                    <figure>
-                      <img
-                        src="https://via.placeholder.com/100X50"
-                        alt="news image"
-                      />
-                    </figure>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </a>
                 </li>
                 <li>
+                  <figure>
+                    <img
+                      src="https://via.placeholder.com/100X50"
+                      alt="news image"
+                    />
+                  </figure>
                   <a href="#FIXME" title="lorem news">
-                    <figure>
-                      <img
-                        src="https://via.placeholder.com/100X50"
-                        alt="news image"
-                      />
-                    </figure>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     </p>
                   </a>
                 </li>
@@ -750,16 +775,18 @@
             </ul>
           </div>
         </div>
-        <div class="top">
-          <figure>
-            <img src="assets/images/down-chevron.png" alt="top button" />
-          </figure>
-          <span>top</span>
+        <div class="top" id="myBtn">
+          <a href="#FIXME" title="top">
+            <figure>
+              <img src="assets/images/down-chevron.png" alt="top button" />
+            </figure>
+            <span>top</span>
+          </a>
         </div>
       </footer>
       <!--footer section end-->
     </div>
     <!--container end-->
-    <script src="js/script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
