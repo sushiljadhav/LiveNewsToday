@@ -403,7 +403,7 @@ nav li a:hover {
 .form-divider li:first-child {
   -ms-flex-preferred-size: 49%;
   flex-basis: 49%;
-  margin-right: calc(4% - 16px);
+  margin-right: calc(3% - 16px);
 }
 
 .form-divider li{
@@ -545,7 +545,7 @@ nav li a:hover {
 }
 
 .news-body-content li:not(:nth-child(2n)) {
-  margin-right: calc(4.1% - 10px);
+  margin-right: calc(3% - 2px);
 }
 
 .news-card {
